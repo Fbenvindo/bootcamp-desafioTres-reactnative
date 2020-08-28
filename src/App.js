@@ -30,7 +30,7 @@ export default function App() {
     
     console.log(likedRepository);
 
-    const upDateRepositories = respositories.map(repository => {
+    const upDateRepositories = repositories.map(repository => {
       if (repository.id === id) {
         return likedRepository;
       } else {
@@ -55,7 +55,7 @@ export default function App() {
             <Text style={styles.repository}>{repository.title}</Text>
             
             <View style={styles.techsContainer}>
-              {repositories.techs.map(tech =>
+              {repository.techs.map(tech =>
            
                 <Text style={styles.tech} key={tech}>
                   {tech}
